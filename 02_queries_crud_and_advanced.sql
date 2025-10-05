@@ -1,0 +1,15 @@
+SELECT * FROM books;
+SELECT * FROM books WHERE title ILIKE '%1984%';
+SELECT * FROM books WHERE author_id = 1;
+SELECT * FROM books WHERE available = TRUE;
+SELECT borrow_book(1, 2);
+SELECT return_book(1, 2);
+UPDATE books SET genres = genres || 'Classic' WHERE id = 3;
+DELETE FROM books WHERE title = 'The Catcher in the Rye';
+DELETE FROM authors WHERE id = 5;
+SELECT * FROM books WHERE published_year > 1950;
+SELECT * FROM authors WHERE nationality = 'American';
+UPDATE books SET available = TRUE;
+SELECT * FROM books WHERE available = TRUE AND published_year > 1950;
+SELECT * FROM authors WHERE name ILIKE '%george%';
+UPDATE books SET published_year = published_year + 1 WHERE published_year = 1869;
